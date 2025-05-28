@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image in Marquee</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .text-content {
+      max-width: 1000px;
+      margin-bottom: 20px;
+    }
+
+    .marquee-container {
+      overflow: hidden;
+      position: relative;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .marquee {
+      display: flex;
+      animation: scroll 20s linear infinite;
+    }
+
+    .marquee img {
+      height: 200px;
+      margin-right: 10px;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0%);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .floating-image {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 180px;
+      border: 2px solid #888;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      z-index: 1000;
+    }
+
+    /* Responsive support */
+    @media (max-width: 600px) {
+      .marquee img {
+        height: 150px;
+      }
+
+      .floating-image {
+        width: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Image in Marquee</h2>
+  <div class="text-content">
+    <p>
+      On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document...
+      (Add full paragraph here)
+    </p>
+  </div>
+
+  <div class="marquee-container">
+    <div class="marquee">
+      <img src="Books.jpg" alt="Stack of books">
+      <img src="Books.jpg" alt="Stack of books">
+      <img src="Books.jpg" alt="Stack of books">
+      <img src="Books.jpg" alt="Stack of books">
+   
+    </div>
+  </div>
+
+
+</body>
+</html>
